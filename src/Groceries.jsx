@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import {FaEdit, FaTrash} from 'react-icons/fa'
 const Groceries = ({items, deleteItem, editItem}) => {
     
   return (
@@ -10,8 +10,8 @@ const Groceries = ({items, deleteItem, editItem}) => {
                 return <article key={id} className='grocery-item'>
                     <p className='title'>{title}</p>
                     <div className="btns">
-                        <button onClick={() => editItem(title, index)}>Edit</button>
-                        <button onClick={() => deleteItem(id)}>Del</button>
+                        <button className='icon edit' onClick={() => editItem(title, index)}><FaEdit/></button>
+                        <button className='icon trash' onClick={() => deleteItem(id)}><FaTrash/></button>
                     </div>
                 </article>
             })
