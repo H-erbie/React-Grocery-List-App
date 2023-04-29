@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import './App.css';
-import Groceries from './Groceries';
-import Alert from './Alert';
+import Groceries from './Groceries.jsx';
+import Alert from './Alert.jsx';
 
 const getLocalStorage = () => {
   let list = localStorage.getItem('list')
